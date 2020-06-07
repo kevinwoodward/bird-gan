@@ -1,0 +1,31 @@
+bird-gan-attributes-split-captions-concat-caption-loss-autoencoder-34: 122.3265224421817
+
+bird-gan-attributes-split-captions-concat-caption-loss-autoencoder-34-balanced: 129.7966532492042
+
+bird-gan-attributes-split-captions-concat-caption-loss-autoencoder: 183.4062143199913
+
+bird-gan-attributes-split-sigmoid-simple-tuning-34vector: 121.13275753501512
+
+bird-gan-attributes-split-sigmoid-simple-tuning: 128.2204749055731
+
+bird-gan-attributes: 353.51351080980686
+
+bird-gan-deeper-smaller-z-balanced: 222.04690311798726
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+REAL IMAGE BASELINE: 6.9701444757662685
+
+bird-gan-attributes-split-captions-concat-caption-loss-autoencoder-34: (48.40 + 48.86) / 2 = 48.63
+
+bird-gan-attributes-split-captions-concat-caption-loss-autoencoder-34-balanced: (52.94 + 52.31) / 2 = 52.63
+
+bird-gan-attributes-split-captions-concat-caption-loss-autoencoder: (64.82 + 62.62) / 2 = 63.72
+
+bird-gan-attributes-split-sigmoid-simple-tuning-34vector: (50.23 + 50.45) / 2 = 50.34
+
+bird-gan-attributes-split-sigmoid-simple-tuning: 52.64
+
+bird-gan-attributes: (5000/11788)*95.01 + (1 - (5000/11788))*96.87495840081236 = 96.0839173
+
+bird-gan-deeper-smaller-z-balanced: (5000/11788)*80.04 + (1 - (5000/11788))*76.98 = 78.28
