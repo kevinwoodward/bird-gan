@@ -1,10 +1,14 @@
 
+
 # BirdGAN
-Progressive implementations of GANs applied to the CUB200 dataset to generate unique images.
+Progressive implementations of GAN architectures applied to the CUB200 dataset to generate unique images conditioned on attributes and caption embeddings.
 
 ### Prerequisites
 
-- The [CUB200](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) dataset.
+- The [CUB200](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) dataset
+- [Captions](https://github.com/taoxugit/AttnGAN) for the CUB200 dataset
+- Pretrained [BERT-large (uncased)](https://github.com/google-research/bert) model for embedding captions to 1024D vectors
+- [bert-as-service](https://github.com/hanxiao/bert-as-service) for utilizing the pretrained BERT model
 - A python notebook environment
 - Python 3.7 
 	- TensorFlow 2.0 or greater
@@ -12,30 +16,27 @@ Progressive implementations of GANs applied to the CUB200 dataset to generate un
 	- OpenCV3
 
 
-## Implementations
-1. Plain DCGAN based off of [TF2](https://www.tensorflow.org/tutorials/generative/dcgan) code.
-2. A deeper variant of the above, also using layer-wise Gaussian noise and label smoothing.
-3. Each of the two above with an MSE metric in tandem with BCE in the generator.
-4. A variant of #2 with Z size cut in half.
+## Implementation Categories (ordered old → new)
+1. Vanilla DCGAN 
+2. Multilabel ACGAN
+3. Multilabel ACGAN with a split discriminator (for finer tuning)
+4. Multilabel ACGAN with a split discriminator with BERT captions
+5. Multilabel ACGAN with a split discriminator with BERT captions V2
 
-## TODO
+## Sample Generations (ordered old → new)
+Vanilla DCGAN:
+![Vanilla DCGAN](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-deeper-smaller-z-balanced/samples1.png?raw=true)
 
-- Implement IS and/or FID, evaluate model performance on these. Results are getting better, so model performance can't be evaluated visually for much longer.
+Multilabel ACGAN:
+![Multilabel ACGAN](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-attributes/samples1.png?raw=true)
 
-- Log real and fake losses for discriminator individually.
+Multilabel ACGAN w/split Discriminator:
+![Multilabel ACGAN w/split Discriminator](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-attributes-split-sigmoid-simple-tuning/manifold3.png?raw=true)
 
-- Look into balancing G and D losses more closely. (See [AC-GAN](https://arxiv.org/pdf/1610.09585.pdf) architectures in appendix).
+Multilabel ACGAN w/split Discriminator and Captions:
+![Multilabel ACGAN w/split Discriminator and Captions](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-attributes-split-captions-concat-caption-loss-autoencoder/samples2.png?raw=true)
 
-- Train better of the two (100 vs 200 Z) with MSE added to BCE in generator.
-
-- Keep MSE if results are promising
-	
-- Make the best model so far conditional on CUB200 classes.
-
-Eventually:
-
-- Implement WGAN-GP.
-
-- Conditionality on captions.
+Multilabel ACGAN w/split Discriminator and Captions V2
+![Multilabel ACGAN w/split Discriminator and Captions V2](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-attributes-split-captions-concat-caption-loss-autoencoder-34-weighted/samples4.png?raw=true)
 
 
