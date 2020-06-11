@@ -25,18 +25,23 @@ Progressive implementations of GAN architectures applied to the CUB200 dataset t
 
 ## Sample Generations (ordered old → new)
 Vanilla DCGAN:
+
 ![Vanilla DCGAN](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-deeper-smaller-z-balanced/samples1.png?raw=true)
 
 Multilabel ACGAN:
+
 ![Multilabel ACGAN](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-attributes/samples1.png?raw=true)
 
 Multilabel ACGAN w/split Discriminator:
+
 ![Multilabel ACGAN w/split Discriminator](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-attributes-split-sigmoid-simple-tuning/manifold3.png?raw=true)
 
 Multilabel ACGAN w/split Discriminator and Captions:
+
 ![Multilabel ACGAN w/split Discriminator and Captions](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-attributes-split-captions-concat-caption-loss-autoencoder/samples2.png?raw=true)
 
 Multilabel ACGAN w/split Discriminator and Captions V2
+
 ![Multilabel ACGAN w/split Discriminator and Captions V2](https://github.com/kevinwoodward/bird-gan/blob/master/results/samples/bird-gan-attributes-split-captions-concat-caption-loss-autoencoder-34-weighted/samples4.png?raw=true)
 
 
